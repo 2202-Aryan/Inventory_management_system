@@ -31,3 +31,5 @@ This is a simple web-based inventory management system built with Flask and SQLi
 2. SQLite: Lightweight relational database for storing product data.
 3. HTML: Markup language for creating the web pages.
 
+## Website Image
+![website screenshot](https://github.com/2202-Aryan/Inventory_management_system/assets/81973170/4898311a-f2b8-4584-8c26-7c3a86a422fa)
