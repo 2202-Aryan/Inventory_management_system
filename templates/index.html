@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Inventory Management System</title>
+    <style>
+        body {
+            background-color: #00FFFF;
+            padding: 20px;
+        }
+        .product-list {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Inventory Management System</h1>
+
+    <h2>Add Product</h2>
+    <form action="/add_product" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" name="name" required>
+        <label for="stock">Stock:</label>
+        <input type="number" name="stock" required>
+        <input type="submit" value="Add Product">
+    </form>
+
+    <h2>Update Stock</h2>
+    <form action="/update_stock" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" name="name" required>
+        <label for="stock">Stock:</label>
+        <input type="number" name="stock" required>
+        <input type="submit" value="Update Stock">
+    </form>
+
+    <h2>Remove Product</h2>
+    <form action="/remove_product" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" name="name" required>
+        <input type="submit" value="Remove Product">
+    </form>
+
+    <div class="product-list">
+        <h2>Product List</h2>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Stock</th>
+            </tr>
+            {% for product in products %}
+            <tr>
+                <td>{{ product[1] }}</td>
+                <td>{{ product[2] }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</body>
+</html>
